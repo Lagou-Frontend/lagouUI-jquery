@@ -1,8 +1,8 @@
 # lagouUI-jquery
 lagouUI base styles and simple components base on jQuery
 
->示例：请点击<a href="http://lagou-frontend.github.io/lagouUI-jquery/example/">示例文档 </a>
->>示例文档原文件在 gh-pages 分支下
+示例：请点击[示例文档](http://lagou-frontend.github.io/lagouUI-jquery/example/)(源文件在<code> gh-pages </code> 分支下)
+
 
 ###使用方式：
 
