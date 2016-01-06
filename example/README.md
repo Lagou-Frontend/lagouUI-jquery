@@ -1,7 +1,7 @@
 # lagouUI-demo
 lagouUI示例文档结构如下
 
-
+```
 lagouUI-demo/
 ├── dist/
 |	 ├──── img/
@@ -28,3 +28,4 @@ lagouUI-demo/
 |
 ├── index.js
 └── README.md 
+```
