@@ -13,11 +13,11 @@ lagouUI-jquery/<br>
 |    |<br>
 |    |──── less/<br>
 |    |      |── mixins/<br>        
-|	 |		|      ├── btn-icon.less 		带图标按钮Less源文件<br>
-|	 |		|      ├── caret.less 	    	上/右/下/左箭头Less源文件<br>
-|	 |		|      ├── clearfix.less 		清楚浮动Less源文件<br>
-|	 |		|      ├── text-overflow.less 	文本溢出Less源文件<br>
-|	 |		|      ├── verder-prefixes.less 带有第三方前缀属性Less源文件<br>
+|	 |		|      |── btn-icon.less 		带图标按钮Less源文件<br>
+|	 |		|      |── caret.less 	    	上/右/下/左箭头Less源文件<br>
+|	 |		|      |── clearfix.less 		清楚浮动Less源文件<br>
+|	 |		|      |── text-overflow.less 	文本溢出Less源文件<br>
+|	 |		|      |── verder-prefixes.less 带有第三方前缀属性Less源文件<br>
 |	 |		|      └── mixins.less 	        引入所有方法Less源文件<br>
 |	 |		|<br>
 |    |      |── modules/<br>
