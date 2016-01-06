@@ -1,0 +1,125 @@
+/*头部公共样式*/
+body {
+    font-size: 14px;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fafafa;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.top_logo {
+    width: 97px;
+    height: 34px;
+    margin-top: 13px;
+    background: url(img/logo.png) left top no-repeat;
+}
+.top_logo h1 {
+    font-size: 0;
+}
+.top_nav {
+    line-height: 60px;
+    height: 60px;
+    margin-left: 60px;
+}
+.top_nav li {
+    line-height: 60px;
+    display: block;
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+.top_nav li a {
+    display: block;
+    color: #999;
+}
+.top_nav li a:hover {
+    text-decoration: none;
+    color: #333;
+}
+/*slogan样式*/
+.slogan {
+    width: 100%;
+    background-color: #00b38a;
+}
+.slogan_content {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    padding: 4em 0;
+    margin: 0;
+}
+/*主要内容*/
+
+/*左侧菜单*/
+.item_menu {
+    width: 120px;
+    margin-right: 40px;
+}
+.item_menu li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #999;
+    text-align: right;
+    cursor: pointer;
+}
+.item_menu li.active, .item_menu li:hover{
+    color: #00b38a;
+}
+/*右侧主要内容*/
+.main {
+    width: 820px;
+    padding: 15px 10px;
+}
+.item {
+    width: 100%;
+}
+.item + .item {
+    margin-top: 30px;
+}
+.item .item_name {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 1px solid #d2d2d2;
+}
+.item .item_name_des {
+    font-size: 16px;
+    color: #555;
+}
+.item .item_text {
+    font-size: 14px;
+    color: #777;
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #00b38a;
+    border-radius: 4px;
+}
+.code_area {
+    margin-bottom: 20px;
+}
+.example_part {
+    margin-top: 20px;
+    background-color: #d4d6d9;
+    padding: 20px 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.code_part {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 20px 10px;
+    background-color: #cdd2d8;
+}
+
+
+
