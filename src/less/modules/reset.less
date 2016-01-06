@@ -1,0 +1,33 @@
+@import  "../mixins/mixins";
+body { margin: 0; padding: 0; font-family: "Hiragino Sans GB","Microsoft YaHei","SimSun",Arial,"Helvetica Neue",Helvetica; color: @font-color-3; word-wrap: break-word; -webkit-font-smoothing: antialiased}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary { display: block;}
+progress { display: inline-block; vertical-align: baseline;}
+a { background-color: transparent;outline: 0;text-decoration: none;
+	&:hover{ color: #00b38a; text-decoration: underline; }
+}
+h1,h2,h3,h4,h5,h6 { margin: 10px 0; font-weight: normal;}
+h1 { font-size: @h1-font-size;}
+h2 { font-size: @h2-font-size;}
+h3 { font-size: @h3-font-size;}
+h4 { font-size: @h4-font-size;}
+h5 { font-size: @h5-font-size;}
+h6 { font-size: @h6-font-size;}
+p {margin: 0;}
+p+p {margin-top: 10px;}
+img { border: 0;vertical-align: top; display: inline-block;}
+button,input,optgroup,select,textarea { margin: 0; padding: 0;font-family: inherit;}
+input { font-family: Arial,"Hiragino Sans GB","Microsoft YaHei","SimSun";}
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] ,input[type="file"] { cursor: pointer;}
+input[type="checkbox"],input[type="radio"] { padding: 0;}
+table { border-collapse: collapse; border-spacing: 0;}
+th,td { padding: 0;}
+em,strong { font-weight: normal; font-style: normal;}
+i { font-style: normal;}
+dl,dt,dd {margin: 0;}
+::selection{ color: @color-white; background-color: @color-green;}
+::-moz-focus-inner { border: 0;}
+ul,ol { margin: 0; padding: 0;}
+li { list-style: none;}
+.fl { float: left;}
+.fr { float: right;}
+.clearfix { .clearfix;}

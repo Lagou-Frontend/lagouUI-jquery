@@ -1,0 +1,108 @@
+@import  "../mixins/mixins";
+.dropbox ,[data-role="dropbox"]{
+    position: relative;
+    *border: 1px solid transparent; //解决IE 7下1px黑边
+    width: 300px;
+    height: 46px;
+    .dropbtn {
+        min-width: 200px;
+        width: 100%;
+        height: 100%;
+        padding-right: 44px;
+        text-align: left;
+        *border: none;
+        .caret {
+            position: absolute;
+            z-index: 3;
+            top: 19px;
+            right: 18px;
+            overflow: hidden;
+            .caret-down(6px);
+            .transition(.4s ease-out);
+        }
+        &:focus .caret {
+            .rotate(180deg);
+        }
+    }
+}
+.dropbtn {
+    font-size: @main-font-size;
+    line-height: @input-height;
+    position: relative;
+    z-index: 1;
+    height: @input-height;
+    line-height: normal;
+    line-height: 44px\9;
+    padding-right: 13px;
+    padding-left: 13px;
+    vertical-align: middle;
+    color: #333;
+    border-width: 1px ;
+    border-style: solid;
+    border-radius: @basic-radius;
+    outline: 0;
+    &_gray {
+        border-color: @input-border-gray ;
+        background-color: @input-bg-gray;
+    }
+    &_white {
+        border-color: @input-border-white;
+        background-color: @input-bg-white;
+    }
+    &_warning {
+        border-color: @input-border-warning-color;
+    }
+}
+.drop_menu {
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    min-width: 200px;
+    margin-top: 2px;
+    text-align: left;
+    border: 1px solid @dropmenu-border-color; 
+    border-radius: @basic-radius; 
+    background-color: #fff;
+    .box-shadow( 1px 0 2px rgba(0,0,0,.1)); 
+    .box-sizing(border-box);
+    overflow-x: hidden;
+    > li {
+        line-height: @dropmenu-line-height;
+        display: block;
+        height: @dropmenu-height;
+        color: @dropmenu-font-color;
+        padding-right: 44px;
+        padding-left: 16px;
+        cursor: pointer;
+        font-size: @font-size-14;
+        &:hover {
+            color: @dropmenu-hover-font-color;
+            background-color: @dropmenu-hover-bg-color;
+        }
+        &.hover {
+            color: @dropmenu-hover-font-color;
+            background-color: @dropmenu-hover-bg-color;
+        }
+    }
+}
+&.open > .drop_menu {
+    display: block;
+}
+.text_overflow {
+    .text-overflow;
+}
+
+
+
+
+
+
+
+
+
+
+
+

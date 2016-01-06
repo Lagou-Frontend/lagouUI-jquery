@@ -1,0 +1,19 @@
+//单行文字截断,注意，用此类元素为block或inline-block
+.text-overflow() {
+  word-wrap: normal; // for IE
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//多行文字截断
+
+.line-clamp(@lines, @line-height: 1.3em) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @lines; // 截断行数
+  overflow: hidden;
+  line-height: @line-height;
+  max-height: @line-height * @lines;
+}

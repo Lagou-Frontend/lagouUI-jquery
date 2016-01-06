@@ -1,0 +1,128 @@
+@import  "../mixins/mixins";
+.btn {
+    font-size: @btn-md;
+    line-height: @btn-line-height;
+    display: inline-block;
+    height: @btn-height;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    color: @btn-font-color;
+    background-color: transparent;
+    .box-sizing(content-box);
+    border: 1px solid @btn-border-color;
+    *border: 1px solid transparent; //解决IE 7下1px黑边
+    outline: 0;
+    .border-radius;
+    .transition(.05s linear);
+    &:hover,
+    &.btn_active {
+        text-decoration: none;
+        color: @btn-hover-font-color;
+        background-color: @btn-hover-bg-color;
+    }
+    &.btn_link {
+        color: @btn-font-color;
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &.btn_outline {
+        color: @btn-font-color;
+        background-color: transparent;
+    }
+    &_sm {
+        font-size: @btn-sm;
+        line-height: @btn-line-height-sm;
+        height: @btn-height-sm;
+    }
+    &_lg {
+        font-size: @btn-lg;
+        line-height: @btn-line-height-lg;
+        height: @btn-height-lg;
+    }
+    &_block {
+        display: block;
+        width: 100%;
+        padding:0;
+    }
+}
+.btn_green {
+    color: @btn-green-font-color;
+    border-color: @btn-green-border-color;
+    background-color: @btn-green-bg-color;
+    &:hover,
+    &.btn_active {
+        color: @btn-green-hover-font-color;
+        border-color: @btn-border-hover-color;
+        background-color: @btn-green-hover-bg-color;
+    }
+    &.btn_link {
+        color: @btn-green-font-color;
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &.btn_outline {
+        color: @btn-green-font-color;
+        background-color: transparent;
+    }
+}
+.btn_red {
+    color: @btn-red-font-color;
+    border-color: @btn-red-border-color;
+    background-color: @btn-red-bg-color;
+    &:hover,
+    &.btn_active {
+        color: @btn-red-hover-font-color;
+        background-color: @btn-red-hover-bg-color;
+    }
+    &.btn_link {
+        color: @btn-red-font-color;
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &.btn_outline {
+        color: @btn-red-font-color;
+        background-color: transparent;
+    }
+}
+.btn_icon {
+    padding-left: 35px;
+    padding-right: 20px;
+    color: @btn-icon-font-color;
+    border-color: @btn-icon-border-color;
+    background-color: @btn-icon-bg-color;
+    overflow:hidden;
+    .icon {
+        display: inline-block;
+        height: 19px;
+        width: 21px;
+        vertical-align: middle;
+        .btn-icon(url(../img/icon-download.png),-21px);
+        padding-right: 5px;
+    }
+    &:hover {
+        color: @btn-icon-hover-font-color;
+        border-color: @btn-icon-border-color;
+        background-color: @btn-icon-hover-bg-color;
+        .icon { 
+            background-position: 0 0;
+        }
+    }
+    .transition(none);
+}
+.btn_disabled {
+    color: @btn-disabled-font-color;
+    border-color: @btn-disabled-border-color;
+    background-color: @btn-disabled-bg-color;
+    pointer-events: none;
+    &:hover {
+        cursor: default;
+        color: @btn-disabled-font-color;
+        border-color: @btn-disabled-border-color;
+        background-color: @btn-disabled-bg-color;
+    }
+    &.btn_outline {
+        color: @btn-disabled-outline-font-color;
+        background-color: transparent;
+    }
+}

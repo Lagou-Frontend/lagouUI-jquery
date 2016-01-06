@@ -1,0 +1,251 @@
+@import  "../mixins/mixins";
+
+.xdsoft_datetimepicker {
+	position: absolute;
+	z-index: 9999;
+	background: @color-white;
+	color: @font-color-3;
+	border: 1px solid #e7e7e7;
+	.box-shadow(1px 2px 3px rgba(0,0,0,.08));
+	.box-sizing(border-box); 
+	margin-top: 2px;
+	.border-radius;
+	display: none;
+	button {
+		border: none !important;  /*For IE8 */
+	}
+	.xdsoft_datepicker , .xdsoft_timepicker {
+		display: none;
+	}
+	.xdsoft_datepicker.active , .xdsoft_timepicker.active {
+		display: block;
+	}
+	.xdsoft_datepicker {
+		width: 290px;
+		float: left;
+		.xdsoft_mounthpicker {
+			position: relative;
+			text-align: center;
+			height: 67px;
+		}
+	}
+	.xdsoft_scrollbar >.xdsoft_scroller {
+		background: #8dcfbe;
+		height: 50px;
+		border-radius: 4px;
+	}
+	.xdsoft_scrollbar {
+		position: absolute;
+		width: 5px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		cursor: pointer;
+	}
+	.xdsoft_scroller_box {
+		position: relative;
+		border-left: 1px solid #8dcfbe;
+	}
+	.xdsoft_timepicker {
+		width: 73px;
+		float: left;
+		text-align: center;
+		margin-top: 69px;
+		.xdsoft_time_box {
+			height: 254px;
+			overflow: hidden;
+			position: relative;
+		}
+		.xdsoft_time_box >div >div {
+			color: @font-color-5;
+			font-size: @font-size-14;
+			text-align: center;
+			border-collapse: collapse;
+			cursor: pointer;
+			height: 34px;
+			line-height: 34px;
+			&:hover , &.xdsoft_current {
+				color: @color-green;
+				background-color: @color-white;
+			}
+			 
+		}
+		&.active button {
+			display: none;
+		}
+	}
+	.xdsoft_prev ,.xdsoft_next {
+		position: absolute;
+		z-index: 666;
+		top: 22px;
+		height: 18px;
+		width: 9px;
+		display: block;
+		background-image: url(../img/arrow-icon.png);
+		background-color: transparent;
+	}
+	.xdsoft_prev {
+		left: 15px;
+		background-position: 0 0;
+		&:hover {
+			background-position: 0 -18px;
+		}
+	}
+	.xdsoft_next {
+		right: 15px;
+		background-position: 0 -36px;
+		&:hover {
+			background-position: 0 -54px;
+		}
+	}
+	.xdsoft_label {
+		display: inline-block;
+		position: relative;
+		z-index: 9999;
+		font-size: @font-size-14;
+		background-color: @color-white;
+		width: 94px;
+		height: 34px;
+		border: 1px solid #e7e7e7;
+		border-radius: 2px;
+		line-height: 36px;
+		cursor: pointer;
+		padding: 0 13px;
+		margin: 15px;
+		text-align: left;
+		color: @font-color-3;
+		&:after {
+			position: absolute;
+			content: '';
+			right: 11px;
+			top: 15px;
+			width: 0;
+		    height: 0;
+		    border-width: 6px 6px 0;
+		    border-style: solid dashed;
+		    border-color: #d3d3d3 transparent transparent transparent;
+		    clear: both;
+		}
+		> .xdsoft_select {
+			position: absolute;
+			right: 0;
+			top: 100%;
+			width: 100%;
+			z-index: 101;
+			display: none;
+			background: @color-white;
+			overflow-y: hidden;
+			border: 1px solid #e7e7e7;
+			.box-shadow(1px 2px 3px rgba(0,0,0,.08));
+			.box-sizing(border-box);
+			max-height: 300px;
+			> div > .xdsoft_option:hover {
+				color: @color-green;
+				background: #f4f4f4;
+			}
+			> div > .xdsoft_option {
+				padding-left: 13px;
+				padding-right: 13px;
+				text-decoration: none ;
+			}
+			> div > .xdsoft_option.xdsoft_current {
+				background: #f4f4f4;
+				color: @color-green;
+			}
+		} 
+	}
+	.xdsoft_year{
+		float: right;
+	}
+	.xdsoft_month {
+		float: right;
+		margin-left: 0;
+	}
+	.xdsoft_calendar {
+		border-top: 1px dashed #f0f0f0;
+		clear: both;
+		margin-bottom: 10px;
+		table {
+			border-collapse: collapse;
+			width: 250px;
+			padding: 15px 20px 20px;
+			margin:  0 auto;
+		}
+		td , th {
+			width: 35px;
+			height: 35px;
+			color: @font-color-3;
+			font-size: 14px;
+			text-align: center;
+			vertical-align: middle;
+			border-collapse: collapse;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		td.xdsoft_today {
+			position: relative;
+			color: @color-green;
+			background-color: @color-white;
+			&:after {
+				position: absolute;
+				content: '';
+				bottom: 5px;
+				right: 42%;
+				width: 4px;
+				height: 4px;
+				border-radius: 10px;
+				background-color: @color-green;
+			}
+		}
+		td.xdsoft_default , td.xdsoft_current {
+			background: @color-green;
+			color: @color-white;
+			font-weight: normal;
+		}
+		td:hover {
+			color: @color-white ;
+			background: @color-green ;
+		}
+		td.xdsoft_other_month.xdsoft_disabled {
+			opacity: 0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			&:hover {
+				cursor: default;
+			}
+		}
+		th {
+			font-weight: normal;
+			text-align: center;
+			color: @font-color-9;
+			cursor: default;
+			font-size: @font-size-14;
+			background-color: @color-white;
+		}
+	}
+	.text {
+		position: relative;
+		border: none;
+		display: inline;
+		padding: 0;
+		text-align: center;
+		margin: 15px 0;
+		width: auto;
+		pointer-events:none;
+		span {
+			text-align: center;
+			font-size: @font-size-18;
+			color: @font-color-3;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	.xdsoft_month.text {
+		margin-right: 103px;
+		margin-left: 17px;
+	}
+	.xdsoft_year.text span:after{
+		position: absolute;
+		content: '年';
+	}
+}
