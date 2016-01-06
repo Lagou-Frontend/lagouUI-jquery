@@ -25,7 +25,6 @@ lagouUI-demo/
 |	 ├──── SHcode/		高亮显示页面源代码相关 js/css 文件
 |	 └──── sticky.js 	示例文档左侧菜单固定插件
 |
-|
 ├── index.js
 └── README.md 
 ```
