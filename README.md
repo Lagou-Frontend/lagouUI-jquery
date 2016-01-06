@@ -1,6 +1,9 @@
 # lagouUI-jquery
 lagouUI base styles and simple components base on jQuery
 
+示例：请点击<a href="http://lagou-frontend.github.io/lagouUI-jquery/example/">示例文档 </a>
+
+文档结构如下
 lagouUI-jquery/<br>
 |—— src/<br>
 |	 |———— img/<br>
