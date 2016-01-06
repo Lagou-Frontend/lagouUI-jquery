@@ -4,14 +4,14 @@ lagouUI base styles and simple components base on jQuery
 示例：请点击<a href="http://lagou-frontend.github.io/lagouUI-jquery/example/">示例文档 </a>
 
 使用方式：
-
-1、clone 或 download 一份源文件
-2、执行 npm install 安装gulp 依赖
-3、执行 gulp 生成dist/ 
-4、执行 gulp watch 实施监听代码更改
-
-
-
+<br>
+1、clone 或 download 一份源文件<br>
+2、执行 npm install 安装gulp 依赖<br>
+3、执行 gulp 生成dist/ <br>
+4、执行 gulp watch 实施监听代码更改<br>
+<br>
+<br>
+<br>
 源文档结构如下
 lagouUI-jquery/<br>
 |—— src/<br>
