@@ -14,74 +14,34 @@ lagouUI base styles and simple components base on jQuery
 <br>
 源文档结构如下
 ``` 
-├── README.md
-├── example
-│   ├── README.md
-│   ├── demo
-│   │   ├── demo.css
-│   │   ├── demo.js
-│   │   └── img
-│   │       └── logo.png
-│   ├── dist
-│   │   ├── css
-│   │   │   ├── lagou.css
-│   │   │   ├── lagou.css.map
-│   │   │   ├── lagou.css.min.map
-│   │   │   └── lagou.min.css
-│   │   ├── img
-│   │   │   ├── arrow-icon.png
-│   │   │   ├── checkbox.png
-│   │   │   ├── icon-download.png
-│   │   │   ├── info.png
-│   │   │   └── tips-close.png
-│   │   └── js
-│   │       ├── ui.js
-│   │       └── ui.min.js
-│   ├── index.html
-│   └── vender
-│       ├── SHcode
-│       │   ├── shAutoloader.js
-│       │   ├── shBrushCss.js
-│       │   ├── shBrushJScript.js
-│       │   ├── shBrushXml.js
-│       │   ├── shCore.js
-│       │   └── shCoreDefault.css
-│       ├── h5shiv.min.js
-│       ├── jquery
-│       │   └── jquery.min.js
-│       ├── modernizr.js
-│       └── sticky.js
-├── gulpfile.js
-├── package.json
-└── src
-    ├── img
-    │   ├── arrow-icon.png
-    │   ├── checkbox.png
-    │   ├── icon-download.png
-    │   ├── info.png
-    │   └── tips-close.png
-    ├── js
-    │   ├── ui.baseUtils.js
-    │   ├── ui.checkbox.js
-    │   ├── ui.datepicker.js
-    │   ├── ui.dropbox.js
-    │   └── ui.multiSelect.js
-    └── less
-        ├── lagou.less
-        ├── mixins
-        │   ├── btn-icon.less
-        │   ├── caret.less
-        │   ├── clearfix.less
-        │   ├── mixins.less
-        │   ├── text-overflow.less
-        │   └── vender-prefixes.less
-        ├── modules
-        │   ├── btn.less
-        │   ├── checkbox.less
-        │   ├── datepicker.less
-        │   ├── dropbox.less
-        │   ├── input.less
-        │   ├── multiselect.less
-        │   └── reset.less
-        └── variables.less
+├── img                     组件所用图标
+│   ├── arrow-icon.png
+│   ├── checkbox.png
+│   ├── icon-download.png
+│   ├── info.png
+│   └── tips-close.png
+├── js                      js文件
+│   ├── ui.baseUtils.js         基础方法、工具方法
+│   ├── ui.checkbox.js          复选框js源文件
+│   ├── ui.datepicker.js        日期时间选框js源文件
+│   ├── ui.dropbox.js           下拉框js源文件
+│   └── ui.multiSelect.js       多选下拉框js源文件
+└── less                    LESS源文件
+    ├── lagou.less              所有方法，组件less元源文件集合
+    ├── mixins                  less方法
+    │   ├── btn-icon.less           带图标按钮less 
+    │   ├── caret.less              上/下/左/右箭头 less方法
+    │   ├── clearfix.less           清楚浮动less方法
+    │   ├── mixins.less             所有方法集合less
+    │   ├── text-overflow.less      文本溢出/截断less方法
+    │   └── vender-prefixes.less    带有第三方前缀的less
+    ├── modules                 基础组件
+    │   ├── btn.less                按钮
+    │   ├── checkbox.less           下拉框
+    │   ├── datepicker.less         日期时间
+    │   ├── dropbox.less            下拉框
+    │   ├── input.less              输入框
+    │   ├── multiselect.less        下拉多选
+    │   └── reset.less              重置样式
+    └── variables.less          变量文件    
 ``` 
