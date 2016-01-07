@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="header">
-	<div class="container clearfix">	
+	<div class="container clearfix">
 		<div class="top_logo fl">
 			<h1>拉勾UI组件</h1>
 		</div>
@@ -32,11 +32,11 @@
 		<ul class="clearfix">
 			<li>按钮</li>
 			<li>复选框</li>
+			<li>输入框</li>
 			<li>下拉框</li>
 			<li>下拉多选框</li>
 			<li>日期时间选框</li>
-			<!-- 
-			<li>Input</li>
+			<!--
 			<li>Multidropbox</li>
 			<li>Textarea</li>
 			<li>Tips</li>
@@ -143,16 +143,48 @@
 			<div class="code_area">
 				<div class="example_part">
 					<h4>实例</h4>
-					<input type="checkbox" value="" class="checkbox" data-text="客户端" > 	
+					<input type="checkbox" value="" class="checkbox" data-text="客户端" >
 					<input type="checkbox" value="" class="checkbox screenbox" data-text="有面试评价">
 				</div>
 				<div class="code_part">
 					<pre class="brush:html">
-						&lt;input type="checkbox" value="" class="checkbox" data-text="客户端" &gt; 
+						&lt;input type="checkbox" value="" class="checkbox" data-text="客户端" &gt;
 						&lt;input type="checkbox" value="" class="checkbox screenbox" data-text="有面试评价"&gt;
 					</pre>
 				</div>
-			</div>	    
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">输入框</h3>
+			<p class="item_name_des">输入框有两种，白色底和灰色底;还可以输入框和按钮组合，类似搜索框</p>
+			<p class="item_text">输入框只是需要在 <code> input</code> 标签添加 <code>.input </code>类即可，然后加上背景颜色 <code> .input_white</code> <code>.input_gray</code></p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<input type="text" value="" class="input input_white" placeholder="请输入信息">
+					<br>
+					<br>
+					<input type="text" value="" class="input input_gray" placeholder="请输入信息">
+					<h4>按钮组</h4>
+					<div class="input_group clearfix">
+						<input type="text" class="input input_white" placeholder="请输入搜索内容">
+						<input type="button" class="btn btn_green btn_active" value="搜 索">
+					</div>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<input type="text" value="" class="input input_white" placeholder="请输入信息">
+						<input type="text" value="" class="input input_gary" placeholder="请输入信息">
+					</pre>
+					<pre class="brush:html">
+						<div class="input_group clearfix">
+							<!-- 按钮组 -->
+							<input type="text" class="input input_white" placeholder="请输入搜索内容">
+							<input type="button" class="btn btn_green btn_active" value="搜 索">
+						</div>
+					</pre>
+				</div>
+			</div>
 		</div>
 		<div class="item">
 			<h3 class="item_name">下拉框</h3>
@@ -203,7 +235,7 @@
 					</pre>
 				</div>
 
-			</div>	    
+			</div>
 		</div>
 		<div class="item">
 			<h3 class="item_name">下拉多选框</h3>
@@ -257,8 +289,8 @@
 						template : ''				建议为默认模板，一般不作更改，可以去源码更改
 					</pre>
 				</div>
-				
-			</div>	    
+
+			</div>
 		</div>
 		<div class="item">
 			<h3 class="item_name">日期时间选框</h3>
@@ -298,20 +330,20 @@
 						$('#datepicker').datetimepicker();
 						<!-- 第二种调用方式 带左右按钮选择日期方式 -->
 						$('#datepicker2').datetimepicker({
-					    	prevButton : true, 
+					    	prevButton : true,
 					    	nextButton : true
 					    });
 					    <!-- 带左右按钮，加上时间选框 -->
 					    $('#datepicker3').datetimepicker({
-					    	prevButton : true, 
+					    	prevButton : true,
 					    	nextButton : true,
 					    	timepicker : true,
 					    	format:	'Y年m月d日 H:i'
 					    });
 					</pre>
 				</div>
-				
-			</div>	    
+
+			</div>
 		</div>
 	</div>
 </div>
@@ -333,11 +365,11 @@ $(document).ready(function(){
             ['js','jscript','javascript','vender/SHcode/shBrushJScript.js'],
             ['css','vender/SHcode/shBrushCss.js'],
             ['html','vender/SHcode/shBrushXml.js']
-        ); 
+        );
     SyntaxHighlighter.defaults['gutter'] = false;
     SyntaxHighlighter.defaults['toolbar'] = false;
-    SyntaxHighlighter.all(); 
-    
+    SyntaxHighlighter.all();
+
     $('.dropbox').dropbox();
     $('#testDropbox').dropbox({
     	width: 320,
@@ -356,16 +388,16 @@ $(document).ready(function(){
 
     $('#datepicker').datetimepicker();
     $('#datepicker2').datetimepicker({
-    	prevButton : true, 
+    	prevButton : true,
     	nextButton : true
     });
     $('#datepicker3').datetimepicker({
-    	prevButton : true, 
+    	prevButton : true,
     	nextButton : true,
     	timepicker : true,
     	format:	'Y年m月d日 H:i'
     });
-})    
+})
 </script>
 </body>
 </html>

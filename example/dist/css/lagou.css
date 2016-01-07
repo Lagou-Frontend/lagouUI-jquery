@@ -358,13 +358,17 @@ li {
 .input_group > input:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-right: 0;
 }
 .input_group > input:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  border-left: 0;
 }
-* + .input_item {
-  margin-top: 23px;
+.input_group > input[type="button"] {
+  height: 44px;
+  line-height: 44px;
+  border-left: 0;
 }
 .dropbox,
 [data-role="dropbox"] {
@@ -666,115 +670,6 @@ li {
 .box_checkbox .screenbox + .checked:before {
   width: 18px;
   background-position: -41px 0;
-}
-.textarea {
-  line-height: 1.2;
-  overflow: hidden;
-  width: 100%;
-  min-height: 40px;
-  max-height: 1000px;
-  padding: 5px;
-  resize: none;
-  color: inherit;
-  border: 1px solid #f1f3e9;
-  outline: 0;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.textarea::-moz-placeholder {
-  color: #b5b5b5;
-  opacity: 1;
-}
-.textarea:-ms-input-placeholder {
-  color: #b5b5b5;
-}
-.textarea::-webkit-input-placeholder {
-  color: #b5b5b5;
-}
-.textarea:focus {
-  border-color: #00b38a;
-}
-.word_limit {
-  display: block;
-  text-align: right;
-}
-.word_limit span {
-  font-weight: 600;
-  display: inline-block;
-  margin: 0 5px;
-  color: #fd5f39;
-}
-.tips,
-.tips_btn {
-  display: inline-block;
-}
-.tips_btn {
-  cursor: pointer;
-}
-.tips_box {
-  font-size: 14px;
-  position: absolute;
-  z-index: 3;
-  max-width: 264px;
-  padding: 6px 9px;
-  text-align: justify;
-  color: #333;
-  border: 2px solid #e7e7e7;
-  background-color: #fff;
-  -webkit-box-shadow: 2px 0 3px #ededed;
-  box-shadow: 2px 0 3px #ededed;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.tips_btn_box {
-  font-size: 14px;
-  position: absolute;
-  z-index: 3;
-  max-width: 147px;
-  padding: 15px 13px 0;
-  color: #333;
-  border: 1px solid #ececdf;
-  background-color: #fefef2;
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.06);
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.06);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.tips_btn_box .close_icon {
-  position: absolute;
-  z-index: 3;
-  top: 7px;
-  right: 7px;
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  cursor: pointer;
-  background-image: url(../img/tips-close.png);
-}
-.tips_btn_box > a {
-  font-size: 14px;
-  line-height: 30px;
-  height: 30px;
-  padding: 0;
-  text-decoration: none;
-  color: #00b38a !important;
-}
-.tips_btn_box:after {
-  position: absolute;
-  right: 40px;
-  bottom: -7px;
-  content: '';
-  width: 0;
-  height: 0;
-  border-width: 8px 8px 0;
-  border-style: solid dashed;
-  border-color: #fefef2 transparent transparent transparent;
 }
 .xdsoft_datetimepicker {
   position: absolute;

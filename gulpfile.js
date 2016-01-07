@@ -17,38 +17,38 @@ gulp.task('styles', function() {
            .pipe(less())
            .pipe(maps.init())
     	   .pipe(maps.write('.'))
-    	   .pipe(gulp.dest('./dist/css'))
+    	   .pipe(gulp.dest('./example/dist/css'))
            .pipe(minify())
            .pipe(maps.write('.'))
     	   .pipe(rename({suffix:'.min'}))
-    	   .pipe(gulp.dest('./dist/css'));
+    	   .pipe(gulp.dest('./example/dist/css'));
 });
 // 处理js文件
 gulp.task('scripts', function() {
-    return gulp.src(['!./src/js/lg.*.js','./src/js/ui.*.js'])
+    return gulp.src(['./src/js/ui.*.js'])
            .pipe(concat('ui.js'))
-           .pipe(gulp.dest('./dist/js'))
+           .pipe(gulp.dest('./example/dist/js'))
            .pipe(rename({suffix:'.min'}))
            .pipe(uglify())
-           .pipe(gulp.dest('./dist/js'));
+           .pipe(gulp.dest('./example/dist/js'));
 });
 // 处理图片
 gulp.task('imgmin', function () {
     gulp.src('src/img/*.{png,jpg,gif,ico}')
         .pipe(imgmin())
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('./example/dist/img'));
 });
 gulp.task('clean', function() {
-    del(['./dist/css', './dist/js','./dist/img'])
+    del(['./example/dist/css', './example/dist/js','./example/dist/img'])
 });
 gulp.task('default', function() {
   // 将你的默认的任务代码放在这
   gulp.start('styles','imgmin','scripts');
 
 });
-gulp.task('watch', function() { 
+gulp.task('watch', function() {
 	gulp.watch('./src/less/**/*.less', ['styles']);
     gulp.watch('./src/js/*.js', ['scripts']);
     livereload.listen(); // 创建一个监听服务器
-    gulp.watch('./dist/**').on('change', livereload.changed);
+    gulp.watch('./example/dist/**').on('change', livereload.changed);
 });
