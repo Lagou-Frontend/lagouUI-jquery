@@ -38,7 +38,7 @@ body {
     display: block;
     color: #999;
 }
-.top_nav li a:hover {
+.top_nav li a:hover ,.top_nav li.active a{
     text-decoration: none;
     color: #333;
 }

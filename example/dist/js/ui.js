@@ -1946,6 +1946,108 @@ Date.parseFunctions={count:0};Date.parseRegexes=[];Date.formatFunctions={count:0
 	}
 
 })(jQuery)
+/**  modal DOM结构
+
+<div class="modal">
+    <div class="modal_content">
+        <div class="modal_header">
+            <button class="modal_close"></button>
+            <h2 class="modal_title">弹窗标题</h2>
+        </div>
+        <div class="modal_body">
+
+        </div>
+        <div class="modal_footer">
+            <button class="btn btn_green btn_active modal_confirm">确 定</button>
+            <button class="btn btn_link modal_cancel">取 消</button>
+        </div>
+    </div>
+</div>
+
+*
+*/
+
+
+
+;(function ($) {
+    'use strict';
+    var Modal = function (ele , options){
+        this.options        = options;
+        this.ele            = $(ele);
+        this.$body          = $(document.body);
+        this.modal_mask     = null;
+        this.isShow         = null;
+        this.modal_title    = '';
+        this.modal_confirm  = '';
+        this.modal_cancel   = '';
+        this.template       = this.$body.find('.modal');
+        this.options = $.extend({},Modal._default, this._options,this.ele.data());
+
+        this.init();
+
+        $(document).on('click', '[data-toggle="modal"]', function (e){
+            var $this = $(this);
+            var $target = $($this.next('.modal'));
+            $target.one('click' ,function(){
+                $this.show();
+            });
+        });
+    };
+    Modal._default = {
+        width: '',
+        height: '',
+        hasMask: '',
+        modal_confirm : '确 定',
+        modal_cancel : '取 消',
+        modal_title : '弹框标题'
+    }
+    Modal.prototype =  {
+        constructor : Modal,
+        init : function (){
+            var modal_temp = $(this.template);
+            modal_temp.css({ width:this.options.width,height:this.options.height});
+            modal_temp.find('.modal_title').text(this.options.modal_title);
+            modal_temp.find('.modal_confirm').text(this.options.modal_confirm);
+            modal_temp.find('.modal_cancel').text(this.options.modal_cancel);
+            this.render();
+        },
+        render : function (){
+            var modal_temp = $(this.template);
+            this.ele.after(this.template);
+            this.toggle();
+        },
+        toggle : function (){
+            return this.isShow ? this.hide() : this.show();
+        },
+        show : function (){
+            this.isShow = true;
+            this.$body.append('<div class="modal_mask"></div>');
+            this.ele.next('.modal').slideDown(300);
+
+
+
+            console.log(11111);
+        },
+        hide : function (){
+            this.isShow = false;
+            console.log(2222);
+        }
+    }
+    $.fn.modal = function (option , target){
+        return this.each(function() {
+            var $this = $(this),
+                data = $this.data('modal'),
+                options = typeof option == 'object' && option;
+                if(!data) {
+                    $this.data('modal' , (data = new Modal(this,options)))
+                }
+                if(typeof option == 'string'){
+                    data[option](target);
+                }
+        });
+    }
+})(jQuery)
+
 ;(function ( $) {
 	'use strict';
 	var Multiselect = function (ele,options){
@@ -2032,9 +2134,6 @@ Date.parseFunctions={count:0};Date.parseRegexes=[];Date.formatFunctions={count:0
 				checkedNum = $parent.find('input:checked').length,
 				inputItem = $parent.find('input'),
 				selectItem =[];
-			if(self.ele[0] != $this.parent().parent().parent()[0]){
-                return
-            }
 			if(checkedNum == multiNum ){
 				return
 			}else if(checkedNum > multiNum){
@@ -2077,105 +2176,4 @@ Date.parseFunctions={count:0};Date.parseRegexes=[];Date.formatFunctions={count:0
 		});
 	}
 	
-})(jQuery)
-;(function ($) {
-	'use strict';
-	var Tips = function (ele , options){
-		this.ele = $(ele);
-		this._options = options;
-		this.dataSetting = this.ele.attr('data-setting');
-		this.tipsText = this.ele.attr('data-text');
-		this._default = {
-			placement : 'top',
-			template : '',
-			text : this.tipsText,
-			hasLink : {
-				_link : false,
-				link_text : '了解更多',
-				link_url : '#'
-			}
-		};
-		this._options = this._options == '' ? {} : this._options;
-		$.extend(this._default, this._options);
-		this.init();
-		$(document).on('click','.tips',$.proxy(this.toggle , this));
-	};
-	Tips.prototype = {
-		constructor : Tips,
-		init : function (){
-			
-			if(this.dataSetting != null ){
-				var _setting = $.parseJSON(this.dataSetting);
-				$.extend(this._default, _setting);
-			}
- 			this.render();
-		},
-		render : function (){
-			var _style = this._default.hasLink,
-				_text = this._default.text,
-				tipsbox = this.ele.siblings('[data-tips-id]');
-			if(_style._link){
-				this._default.template = '<div class="tips_btn_box"><i class="close_icon"></i><p>'+_text+'</p><a class="btn btn_link" href="'+_style.link_url+'">'+_style.link_text+'</a></div>';
-				// console.log(this._default.template);
- 			}else{
- 				this._default.template = '<div class="tips_box">'+_text+'</div>';
- 			}
- 			if(tipsbox.length > 0){
- 				if(tipsbox.is(':visible')){
- 					tipsbox.hide();
- 				}else{
- 					$('[data-tips-id]').hide();
- 					tipsbox.show();
- 				}
- 			}else{
- 				console.log(1111111);
- 				this.ele.after(this._default.template);
- 				var pos = this.getPositon();
- 				this.ele.css(pos);
-				// var $this = $(this);
-				// if($this.attr('data-id')){
-				// 	var tipsbox=$('[data-tips-id='+$this.attr('data-id')+']');
-				// 	if(tipsbox.is(':visible')){
-				// 		tipsbox.hide();
-				// 	}else{
-				// 		$('[data-tips-id]').hide();
-				// 		tipsbox.show();
-				// 	}	
-				// }else{
-				// 	var randomId   = lg.Utils.getRandom();
-				// 	$this.attr('data-id',randomId);
-				// 	$(this._default.template).attr('data-tips-id',randomId);
-				// 	$this.after(this._default.template);
-				// }
- 			}
-		},
-		toggle : function (e){
-			var self = this,
-				$this = $(e.currentTarget);
-			
-			if(self._default.hasLink._link){
-				this.ele.trigger('click');
-			}else{
-				self.ele.trigger('hover')
-			}
-		},
-		getPositon : function (){
-			var placement = this._default.placement,pos='';
-			switch(placement){
-				case 'top' : pos = { left : $(this.ele).position().left + $(this.ele).width()/2, top : $(this.ele).position().top }
-				break
-				case 'bottom' : pos = { left : $(this.ele).position().left + $(this.ele).width()/2, top : $(this.ele).position().top + $(this.ele).height() }
-				break
-			}
-			return pos;
-		}
-	};
-	$('.close_icon').on('click', function() {
-		$(this).parent().hide();
-	});
-	$.fn.tips = function ( option){
-		return this.each(function(){
-			new Tips(this,option)
-		})
-	}
 })(jQuery)

@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "SimSun", Arial, "Helvetica Neue", Helvetica;
   color: #333;
+  font-size: 14px;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
@@ -670,6 +671,52 @@ li {
 .box_checkbox .screenbox + .checked:before {
   width: 18px;
   background-position: -41px 0;
+}
+.modal_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  z-index: 1050;
+  margin-left: -374px;
+  display: none;
+  overflow: hidden;
+  width: 745px;
+  background-color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.modal .modal_content {
+  padding: 50px 65px;
+  position: relative;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.modal .modal_header .modal_title {
+  font-size: 18px;
+  color: #333;
+}
+.modal .modal_header .modal_close {
+  position: absolute;
+  right: 22px;
+  top: 24px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url(../img/modal-close.png) 0 0 no-repeat;
+  border: 0;
+  outline: 0;
 }
 .xdsoft_datetimepicker {
   position: absolute;

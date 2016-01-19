@@ -1,0 +1,47 @@
+// 模态框
+@import  "../mixins/mixins";
+
+.modal_mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgba(0,0,0,.5);
+}
+.modal {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    z-index: 1050;
+    margin-left: -374px;
+    display: none;
+    overflow: hidden;
+    width:745px;
+    background-color: #fff;
+    .border-radius;
+    .modal_content {
+	    padding: 50px 65px;
+    	position: relative;
+        background-color: #fff;
+        .transition(all .3s ease-out);
+    }
+    .modal_header {
+        .modal_title {
+            font-size: @font-size-18;
+            color: @font-color-3;
+        }
+        .modal_close {
+            position: absolute;
+            right: 22px;
+            top: 24px;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background: url(../img/modal-close.png) 0 0 no-repeat;
+            border: 0;
+            outline: 0;
+        }
+    }
+}
