@@ -15,7 +15,7 @@
 			<h1>拉勾UI组件</h1>
 		</div>
 		<div class="top_nav fl">
-			<li><a href="">基础UI</a></li>
+			<li class="active"><a href="">基础UI</a></li>
 			<li><a href="">组件widget</a></li>
 		</div>
 	</div>
@@ -37,12 +37,6 @@
 			<li>下拉多选框</li>
 			<li>日期时间选框</li>
 			<li>排版</li>
-			<!--
-			<li>Multidropbox</li>
-			<li>Textarea</li>
-			<li>Tips</li>
-			<li>Typesetting</li> -->
-
 		</ul>
 	</div>
 	<div class="main fl">
@@ -347,27 +341,6 @@
 
 			</div>
 		</div>
-		<!-- <div class="item">
-			<h3 class="item_name">模态框</h3>
-			<p class="item_name_des">在重置样式中，初始化了基本样式和字体大小 <code>14px</code>，字体颜色 <code>#333</code>等</p>
-			<p class="item_text"></p>
-			<div class="code_area">
-				<div class="example_part">
-					<button class="btn btn_green btn_active" data-toggle="modal"  data-target="textModal">模态框</button>
-
-				</div>
-				<div class="code_part">
-					<pre class="brush:html">
-						<h1>H1 字体大小24px</h1>
-						<h2>H2 字体大小20px</h2>
-						<h3>H3 字体大小18px</h3>
-						<h4>H4 字体大小16px</h4>
-						<h5>H5 字体大小14px</h5>
-						<h6>H6 字体大小12px</h6>
-					</pre>
-				</div>
-			</div>
-		</div> -->
 		<div class="item">
 			<h3 class="item_name">排版</h3>
 			<p class="item_name_des">在重置样式中，初始化了基本样式和字体大小 <code>14px</code>，字体颜色 <code>#333</code>等</p>
@@ -426,62 +399,15 @@
       </div>
     </div>
   </div>
-</div>
-
-	</div>
 </div> -->
 
-
 <script src="vender/jquery/jquery.min.js"></script>
-<script src="demo/demo.js"></script>
 <script src="dist/js/ui.js"></script>
 <!-- 高亮显式代码 -->
 <script src="vender/SHcode/shCore.js"></script>
 <script src="vender/SHcode/shAutoloader.js"></script>
 <!-- 左侧菜单固定在左侧 -->
 <script src="vender/sticky.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	// 调用sticky插件
-	$(".item_menu").stick_in_parent();
-	// 调用语法高亮插件
-	SyntaxHighlighter.autoloader(
-            ['js','jscript','javascript','vender/SHcode/shBrushJScript.js'],
-            ['css','vender/SHcode/shBrushCss.js'],
-            ['html','vender/SHcode/shBrushXml.js']
-        );
-    SyntaxHighlighter.defaults['gutter'] = false;
-    SyntaxHighlighter.defaults['toolbar'] = false;
-    SyntaxHighlighter.all();
-
-    $('.dropbox').dropbox();
-    $('#testDropbox').dropbox({
-    	width: 320,
-    	maxHeight : 200,
-    	placeholder : "测试测试"
-    });
-    $('.multiselect').multiselect();
-    $('#testMultiselect').multiselect({
-    	width: 320,
-    	maxHeight : 200,
-    	placeholder : "下拉测试",
-    	multiNumTips: "(最多选择三个)",
-    	multiNum : 3
-    });
-    $('.checkbox').checkbox();
-
-    $('#datepicker').datetimepicker();
-    $('#datepicker2').datetimepicker({
-    	prevButton : true,
-    	nextButton : true
-    });
-    $('#datepicker3').datetimepicker({
-    	prevButton : true,
-    	nextButton : true,
-    	timepicker : true,
-    	format:	'Y年m月d日 H:i'
-    });
-})
-</script>
+<script src="demo/demo.js"></script>
 </body>
 </html>
