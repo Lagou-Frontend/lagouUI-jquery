@@ -1,26 +1,3 @@
-/**  modal DOM结构
-
-<div class="modal">
-    <div class="modal_content">
-        <div class="modal_header">
-            <button class="modal_close"></button>
-            <h2 class="modal_title">弹窗标题</h2>
-        </div>
-        <div class="modal_body">
-
-        </div>
-        <div class="modal_footer">
-            <button class="btn btn_green btn_active modal_confirm">确 定</button>
-            <button class="btn btn_link modal_cancel">取 消</button>
-        </div>
-    </div>
-</div>
-
-*
-*/
-
-
-
 ;(function ($) {
     'use strict';
     var Modal = function (ele , options){
