@@ -2024,9 +2024,6 @@ Date.parseFunctions={count:0};Date.parseRegexes=[];Date.formatFunctions={count:0
         });
     }
 })(jQuery)
-
-=======
->>>>>>> master
 ;(function ( $) {
 	'use strict';
 	var Multiselect = function (ele,options){
