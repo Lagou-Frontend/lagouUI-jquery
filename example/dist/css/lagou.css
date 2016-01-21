@@ -336,11 +336,11 @@ li {
   color: #b5b5b5;
 }
 .input_gray {
-  border-color: #f3f3f3;
+  border-color: #dce4e6;
   background-color: #f3f3f3;
 }
 .input_white {
-  border-color: #f8f8f8;
+  border-color: #dce4e6;
   background-color: #f8f8f8;
 }
 .input:focus {
@@ -427,11 +427,11 @@ li {
   outline: 0;
 }
 .dropbtn_gray {
-  border-color: #f3f3f3;
+  border-color: #dce4e6;
   background-color: #f3f3f3;
 }
 .dropbtn_white {
-  border-color: #f8f8f8;
+  border-color: #dce4e6;
   background-color: #f8f8f8;
 }
 .dropbtn_warning {
@@ -447,7 +447,7 @@ li {
   min-width: 200px;
   margin-top: 2px;
   text-align: left;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #dce4e6;
   border-radius: 2px;
   background-color: #fff;
   -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
@@ -540,11 +540,11 @@ li {
   outline: 0;
 }
 .selectbtn_gray {
-  border-color: #f3f3f3;
+  border-color: #dce4e6;
   background-color: #f3f3f3;
 }
 .selectbtn_white {
-  border-color: #f8f8f8;
+  border-color: #dce4e6;
   background-color: #f8f8f8;
 }
 .selectbtn_warning {
@@ -562,7 +562,7 @@ li {
   min-width: 200px;
   margin-top: 2px;
   text-align: left;
-  border: 1px solid #e7e7e7;
+  border: 1px solid #dce4e6;
   border-radius: 2px;
   background-color: #fff;
   -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
