@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lagouUI示例文档</title>
+<link rel="stylesheet" href="dist/css/lagou.css">
+<link rel="stylesheet" href="demo/demo.css">
+<!-- 高亮代码样式 -->
+<link rel="stylesheet" href="vender/SHcode/shCoreDefault.css">
+</head>
+<body>
+<div class="header">
+	<div class="container clearfix">
+		<div class="top_logo fl">
+			<h1>拉勾UI组件</h1>
+		</div>
+		<div class="top_nav fl">
+			<li><a href="">基础UI</a></li>
+			<li><a href="">组件widget</a></li>
+		</div>
+	</div>
+</div>
+<div class="slogan">
+	<div class="container">
+		<h2 class="slogan_content">
+			lagouUI,一套致力于让开发更容易、更实用的工具
+		</h2>
+	</div>
+</div>
+<div class="container clearfix" style="margin-top:30px">
+	<div class="item_menu fl">
+		<ul class="clearfix">
+			<li>按钮</li>
+			<li>复选框</li>
+			<li>输入框</li>
+			<li>下拉框</li>
+			<li>下拉多选框</li>
+			<li>日期时间选框</li>
+			<!--
+			<li>Multidropbox</li>
+			<li>Textarea</li>
+			<li>Tips</li>
+			<li>Typesetting</li> -->
+		</ul>
+	</div>
+	<div class="main fl">
+		<div class="item">
+			<h3 class="item_name">按钮</h3>
+			<p class="item_name_des">可作为按钮使用的标签或元素</p>
+			<p class="item_text">为 <code>&lt;a&gt;</code>、<code>&lt;button&gt;</code> 或 <code>&lt;input&gt;</code> 元素添加按钮类（button class）即可使用 lagouUI 提供的样式</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<a href="#" class="btn">link按钮</a>
+					<button class="btn">button按钮</button>
+					<input type="button" class="btn" value="input按钮">
+					<input type="submit" class="btn" value="submit按钮">
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<a href="#" class="btn">link按钮</a>
+						<button class="btn">button按钮</button>
+						<input type="button" class="btn" value="input按钮">
+						<input type="submit" class="btn" value="submit按钮">
+					</pre>
+				</div>
+			</div>
+			<h3 class="item_name">按钮-预定义样式</h3>
+			<p class="item_text">默认为按钮添加了三种样式: <code> .btn_green</code> <code> .btn_red </code><code> .btn_link </code></p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<a href="#" class="btn">默认按钮</a>
+					<button class="btn btn_green">拉勾绿按钮</button>
+					<button class="btn btn_red">拉勾红按钮</button>
+					<a href="#" class="btn btn_link">链接按钮</a>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<a href="#" class="btn">默认按钮</a>
+						<button class="btn btn_green">拉勾绿按钮</button>
+						<button class="btn btn_red">拉勾红按钮</button>
+						<a href="#" class="btn btn_link">链接按钮</a>
+					</pre>
+				</div>
+			</div>
+			<h3 class="item_name">尺寸-预定义尺寸</h3>
+			<p class="item_text">默认为按钮添加了两种尺寸 <code> .btn_sm</code> <code> .btn_lg</code></p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<button class="btn  btn_green btn_sm">小尺寸</button>
+					<a href="#" class="btn btn_green ">默认尺寸</a>
+					<button class="btn  btn_green btn_lg">大尺寸</button>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<button class="btn  btn_green btn_sm">小尺寸</button>
+						<a href="#" class="btn btn_green ">默认尺寸</a>
+						<button class="btn  btn_green btn_lg">大尺寸</button>
+					</pre>
+				</div>
+			</div>
+			<h3 class="item_name">实心、空心、禁用按钮</h3>
+			<p class="item_text">只需要添加实心样式 <code> .btn_active</code> 空心样式 <code> .btn_outline</code>禁用样式 <code> .btn_disabled</code></p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<button class="btn btn_green btn_active">实心按钮</button>
+					<button class="btn btn_green btn_outline">空心按钮</button>
+					<button class="btn btn_green btn_disabled">禁用按钮</button>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<button class="btn btn_green btn_active">实心按钮</button>
+						<button class="btn btn_green btn_outline">空心按钮</button>
+						<button class="btn btn_green btn_disabled">禁用按钮</button>
+					</pre>
+				</div>
+			</div>
+			<h3 class="item_name">其他</h3>
+			<p class="item_text">带图标按钮和块级按钮</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<button class="btn btn_icon"><i class="icon"></i>图标按钮</button>
+					<br>
+					<br>
+					<button class="btn btn_green btn_block">块级按钮</button>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<button class="btn btn_icon"><i class="icon"></i>图标按钮</button>
+						<button class="btn btn_green btn_block">块级按钮</button>
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">复选框</h3>
+			<p class="item_name_des">复选框包含复选框和筛选框</p>
+			<p class="item_text">给<code> input[type=checkbox] </code> 添加复选框样式 <code>.checkbox</code> 给筛选框添加 <code>.checkbox .screenbox</code>并添加自定义属性<code> data-text</code> 来显示label文字，而不需要单独添加 <code>label</code>标签</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<input type="checkbox" value="" class="checkbox" data-text="客户端" >
+					<input type="checkbox" value="" class="checkbox screenbox" data-text="有面试评价">
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						&lt;input type="checkbox" value="" class="checkbox" data-text="客户端" &gt;
+						&lt;input type="checkbox" value="" class="checkbox screenbox" data-text="有面试评价"&gt;
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">输入框</h3>
+			<p class="item_name_des">输入框有两种，白色底和灰色底;还可以输入框和按钮组合，类似搜索框</p>
+			<p class="item_text">输入框只是需要在 <code> input</code> 标签添加 <code>.input </code>类即可，然后加上背景颜色 <code> .input_white</code> <code>.input_gray</code></p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<input type="text" value="" class="input input_white" placeholder="请输入信息">
+					<br>
+					<br>
+					<input type="text" value="" class="input input_gray" placeholder="请输入信息">
+					<h4>按钮组</h4>
+					<div class="input_group clearfix">
+						<input type="text" class="input input_white" placeholder="请输入搜索内容">
+						<input type="button" class="btn btn_green btn_active" value="搜 索">
+					</div>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<input type="text" value="" class="input input_white" placeholder="请输入信息">
+						<input type="text" value="" class="input input_gary" placeholder="请输入信息">
+					</pre>
+					<pre class="brush:html">
+						<div class="input_group clearfix">
+							<!-- 按钮组 -->
+							<input type="text" class="input input_white" placeholder="请输入搜索内容">
+							<input type="button" class="btn btn_green btn_active" value="搜 索">
+						</div>
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">下拉框</h3>
+			<p class="item_name_des">当你向一个<code>div</code>添加样式<code>.dropbox</code>或者 <code>data-role="dropbox"</code>两者需写一个便认为他要调用Dropbox插件，其中默认有两种方式配置参数，数据;</p>
+			<p class="item_text">第一种配置方式：通过<code>data-setting='{}'</code>配置，第二种在调用时配置参数</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<div class="dropbox"></div>
+					<br>
+					<br>
+					<div class="dropbox" data-setting='{"width":400,"height":40}'></div>
+					<br>
+					<br>
+					<div data-role="dropbox" id="testDropbox"></div>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<!-- 调用dropbox都必须要在<code>script</code>标签中显式调用 -->
+						&lt;script&gt;
+							$('.dropbox').dropbox();
+						&lt;/script&gt;
+						<!-- 默认配置 -->
+						&lt;div class="dropbox" &gt;&lt;/div&gt;
+						<!-- 通过data—setting配置参数 -->
+						<!-- ps:注意自定义属性配置参数一定要符合json格式 -->
+						&lt;div class="dropbox" data-setting='{"width":400,"height":40}'&gt;&lt;/div&gt;
+					</pre>
+					<pre class="brush:html">
+						&lt;div  data-role="dropbox" id="testDropbox"&gt;&lt;/div&gt;
+						<!-- 调用的时候配置参数 -->
+						$('#testDropbox').dropbox({
+					    	width: 320,
+					    	maxHeight : 200,
+					    	placeholder : "测试测试"
+					    })
+					</pre>
+					<pre class="brush:html">
+						<!-- Dropbox 参数列表 -->
+						width : '',    				默认300px
+						height : '',   				默认46px
+						maxHeight:'',  				默认没有
+						bgcolor : "white",			默认为white可以选gray
+						isOverflow : false,			默认为false
+						placeholder: '请选择',		  默认为“请选择”
+						data : ['2K以下','5K以下'],  默认数据，可自定义添加
+						template : ''				建议为默认模板，一般不作更改，可以去源码更改
+					</pre>
+				</div>
+
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">下拉多选框</h3>
+			<p class="item_name_des">当你向一个<code>div</code>添加样式<code>.multiselect</code>或者 <code>data-role="multiselect"</code>两者需写一个便认为他要调用Multiselect插件，其中默认有两种方式配置参数，数据;</p>
+			<p class="item_text">第一种配置方式：通过<code>data-setting='{}'</code>配置，第二种在调用时配置参数</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<div class="multiselect"></div>
+					<br>
+					<br>
+					<div class="multiselect" data-setting='{"width":400,"height":40}'></div>
+					<br>
+					<br>
+					<div data-role="multiselect" id="testMultiselect"></div>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<!-- 调用multiselect都必须要在<code>script</code>标签中显式调用 -->
+						&lt;script&gt;
+							$('.multiselect').multiselect();
+						&lt;/script&gt;
+						<!-- 默认配置 -->
+						&lt;div class="multiselect" &gt;&lt;/div&gt;
+						<!-- 通过data—setting配置参数 -->
+						<!-- ps:注意自定义属性配置参数一定要符合json格式 -->
+						&lt;div class="multiselect" data-setting='{"width":400,"height":40}'&gt;&lt;/div&gt;
+					</pre>
+					<pre class="brush:html">
+						&lt;div  data-role="multiselect" id="testMultiselect"&gt;&lt;/div&gt;
+						<!-- 调用的时候配置参数 -->
+						$('#testMultiselect').multiselect({
+					    	width: 320,
+					    	maxHeight : 200,
+					    	placeholder : "下拉测试",
+					    	multiNumTips: "(最多选择三个)",
+    						multiNum : 3
+					    })
+					</pre>
+					<pre class="brush:html">
+						<!-- Multiselect 参数列表 -->
+						width : '',    				默认300px
+						height : '',   				默认46px
+						maxHeight:'',  				默认没有
+						bgcolor : "white",			默认为white可以选gray
+						isOverflow : false,			默认为false
+						multiNum : 2,				设置允许多选个数
+						placeholder: '请选择',		  默认为“请选择”
+						multiNumTips :''			(最多可选择两个)
+						data : ['2K以下','5K以下'],  默认数据，可自定义添加
+						template : ''				建议为默认模板，一般不作更改，可以去源码更改
+					</pre>
+				</div>
+
+			</div>
+		</div>
+		<div class="item">
+			<h3 class="item_name">日期时间选框</h3>
+			<p class="item_name_des">本日期时间选框是基于<code>datetimepicker</code>，配置详情可具体百度其PAI，默认为下拉选择日期或者时间，也可以配置左右箭头选择日期，如下：</p>
+			<p class="item_text">下面附上其常用配置。</p>
+			<div class="code_area">
+				<div class="example_part">
+					<h4>实例</h4>
+					<input type="text" class="input input_gray" id="datepicker" placeholder="请选择日期" readonly>
+					<br>
+					<br>
+					<br>
+					<br>
+					<input type="text" class="input input_gray" id="datepicker2" placeholder="请选择日期" readonly>
+					<br>
+					<br>
+					<br>
+					<br>
+					<input type="text" class="input input_gray" id="datepicker3" placeholder="请选择日期时间" readonly>
+				</div>
+				<div class="code_part">
+					<pre class="brush:html">
+						<!-- 调用datepicker都必须要在<code>script</code>标签中显式调用 -->
+						<input type="text" class="input input_gray" id="datepicker" placeholder="请选择日期" readonly>
+
+						<input type="text" class="input input_gray" id="datepicker2" placeholder="请选择日期" readonly>
+
+						<input type="text" class="input input_gray" id="datepicker3" placeholder="请选择日期时间" readonly>
+						<!-- 常用默认配置 -->
+						lang: 'zh'   			默认语言 可以选择 'zh / en' 中英文;
+						formatDate : 'Y-m-d' 	日期格式，支持自定义 ex: Y/m/d  Y年m月d日
+						prevButton : true, 		带左右箭头
+    					nextButton : true
+					</pre>
+					<pre class="brush:html">
+						<!-- 第一种调用方式 默认选取时期方式 -->
+						$('#datepicker').datetimepicker();
+						<!-- 第二种调用方式 带左右按钮选择日期方式 -->
+						$('#datepicker2').datetimepicker({
+					    	prevButton : true,
+					    	nextButton : true
+					    });
+					    <!-- 带左右按钮，加上时间选框 -->
+					    $('#datepicker3').datetimepicker({
+					    	prevButton : true,
+					    	nextButton : true,
+					    	timepicker : true,
+					    	format:	'Y年m月d日 H:i'
+					    });
+					</pre>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="vender/jquery/jquery.min.js"></script>
+<script src="demo/demo.js"></script>
+<script src="dist/js/ui.js"></script>
+<!-- 高亮显式代码 -->
+<script src="vender/SHcode/shCore.js"></script>
+<script src="vender/SHcode/shAutoloader.js"></script>
+<!-- 左侧菜单固定在左侧 -->
+<script src="vender/sticky.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// 调用sticky插件
+	$(".item_menu").stick_in_parent();
+	// 调用语法高亮插件
+	SyntaxHighlighter.autoloader(
+            ['js','jscript','javascript','vender/SHcode/shBrushJScript.js'],
+            ['css','vender/SHcode/shBrushCss.js'],
+            ['html','vender/SHcode/shBrushXml.js']
+        );
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.all();
+
+    $('.dropbox').dropbox();
+    $('#testDropbox').dropbox({
+    	width: 320,
+    	maxHeight : 200,
+    	placeholder : "测试测试"
+    });
+    $('.multiselect').multiselect();
+    $('#testMultiselect').multiselect({
+    	width: 320,
+    	maxHeight : 200,
+    	placeholder : "下拉测试",
+    	multiNumTips: "(最多选择三个)",
+    	multiNum : 3
+    });
+    $('.checkbox').checkbox();
+
+    $('#datepicker').datetimepicker();
+    $('#datepicker2').datetimepicker({
+    	prevButton : true,
+    	nextButton : true
+    });
+    $('#datepicker3').datetimepicker({
+    	prevButton : true,
+    	nextButton : true,
+    	timepicker : true,
+    	format:	'Y年m月d日 H:i'
+    });
+})
+</script>
+</body>
+</html>
