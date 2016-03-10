@@ -12,11 +12,7 @@ lagouUI base styles and simple components base on jQuery
 4.   执行 gulp watch 实施监听代码更改<br>
 
 ###源文档结构如下
-<<<<<<< HEAD
 ```
-=======
-``` 
->>>>>>> master
 ├── img                     组件所用图标
 │   ├── arrow-icon.png
 │   ├── checkbox.png
@@ -32,11 +28,7 @@ lagouUI base styles and simple components base on jQuery
 └── less                    LESS源文件
     ├── lagou.less              所有方法，组件less元源文件集合
     ├── mixins                  less方法
-<<<<<<< HEAD
-    │   ├── btn-icon.less           带图标按钮less
-=======
     │   ├── btn-icon.less           带图标按钮less 
->>>>>>> master
     │   ├── caret.less              上/下/左/右箭头 less方法
     │   ├── clearfix.less           清楚浮动less方法
     │   ├── mixins.less             所有方法集合less
@@ -50,10 +42,5 @@ lagouUI base styles and simple components base on jQuery
     │   ├── input.less              输入框
     │   ├── multiselect.less        下拉多选
     │   └── reset.less              重置样式
-<<<<<<< HEAD
     └── variables.less          变量文件
-```
-=======
-    └── variables.less          变量文件    
-``` 
->>>>>>> master
+```   
