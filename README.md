@@ -20,14 +20,14 @@ lagouUI base styles and simple components base on jQuery
 │   ├── info.png
 │   └── tips-close.png
 ├── js                      js文件
-│   ├── ui.baseUtils.js         基础方法、工具方法
+│   ├── ui.baseUtils.js         基础方法、工具方法--------必需引用
 │   ├── ui.checkbox.js          复选框js源文件
 │   ├── ui.datepicker.js        日期时间选框js源文件
 │   ├── ui.dropbox.js           下拉框js源文件
 │   └── ui.multiSelect.js       多选下拉框js源文件
 └── less                    LESS源文件
     ├── lagou.less              所有方法，组件less元源文件集合
-    ├── mixins                  less方法
+    ├── mixins                  less方法---------------------必需引用
     │   ├── btn-icon.less           带图标按钮less 
     │   ├── caret.less              上/下/左/右箭头 less方法
     │   ├── clearfix.less           清楚浮动less方法
@@ -41,6 +41,8 @@ lagouUI base styles and simple components base on jQuery
     │   ├── dropbox.less            下拉框
     │   ├── input.less              输入框
     │   ├── multiselect.less        下拉多选
-    │   └── reset.less              重置样式
+    │   └── reset.less              重置样式---------必需引用
     └── variables.less          变量文件    
 ``` 
+###文档说明：
+	除必需引用外都可以按需引用
